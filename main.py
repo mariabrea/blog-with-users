@@ -88,7 +88,9 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
 
 
+User.__table__.drop()
 db.create_all()
+
 
 
 @app.route('/')
